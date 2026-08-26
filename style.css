@@ -1,0 +1,138 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+body {
+  background-color: #0d1117;
+  color: #c9d1d9;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.app-container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+}
+
+.sidebar {
+  width: 360px;
+  min-width: 360px;
+  background-color: #161b22;
+  border-right: 1px solid #30363d;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  overflow-y: auto;
+}
+
+header h1 {
+  font-size: 1.35rem;
+  color: #58a6ff;
+}
+
+.subtitle {
+  font-size: 0.78rem;
+  color: #8b949e;
+}
+
+.control-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.control-group label {
+  font-size: 0.82rem;
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+}
+
+.control-group span {
+  color: #58a6ff;
+  font-family: monospace;
+}
+
+input[type="range"], select {
+  width: 100%;
+  accent-color: #238636;
+  background-color: #0d1117;
+  color: #c9d1d9;
+  border: 1px solid #30363d;
+  border-radius: 4px;
+  padding: 4px;
+}
+
+.button-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+  margin-top: 0.25rem;
+}
+
+button {
+  padding: 0.6rem;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: opacity 0.2s;
+}
+
+button:hover { opacity: 0.85; }
+
+button.primary {
+  background-color: #238636;
+  color: #ffffff;
+}
+
+button.secondary {
+  background-color: #21262d;
+  color: #c9d1d9;
+  border: 1px solid #30363d;
+}
+
+.telemetry {
+  background: #0d1117;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  padding: 0.75rem;
+  margin-top: auto;
+}
+
+.telemetry h3 {
+  font-size: 0.85rem;
+  color: #f0883e;
+  margin-bottom: 0.5rem;
+}
+
+.metric-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.4rem;
+  font-size: 0.75rem;
+}
+
+.metric strong {
+  display: block;
+  font-family: monospace;
+  color: #7ee787;
+  font-size: 0.82rem;
+}
+
+.canvas-wrapper {
+  flex: 1;
+  position: relative;
+  background-color: #090d13;
+}
+
+canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
